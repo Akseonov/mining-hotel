@@ -1,6 +1,6 @@
 <template>
 	<div class="home">
-		<img alt="Vue logo" src="../assets/logo.png" />
+		<img alt="Vue logo" src="../assets/logo.png" @click="myComponent" />
 		<HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
 	</div>
 </template>
@@ -13,6 +13,13 @@
 		name: "Home",
 		components: {
 			HelloWorld,
+		},
+		methods: {
+			myComponent() {
+				setTimeout( () => {
+					console.log( '1' );
+				} );
+			},
 		},
 	} );
 </script>

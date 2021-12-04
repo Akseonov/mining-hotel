@@ -2,7 +2,6 @@ const path = require( "path" );
 
 const { NODE_ENV, HOST, PORT } = process.env;
 const isDev = NODE_ENV === "development";
-// const mode = isDev ? "development" : "production";
 const host = HOST || "localhost";
 const port = PORT || 3000;
 
@@ -14,9 +13,10 @@ const paths = {
 
 module.exports = {
 	// mode,
-	publicPath: "/",
+	publicPath: isDev
+		? '/'
+		: '/production-sub-path/', // поменять для production
 	outputDir: paths.build,
-	lintOnSave: isDev,
 	productionSourceMap: false,
 
 	// stats: {
