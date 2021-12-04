@@ -6,6 +6,7 @@ module.exports = {
 	},
 	extends: [
 		"plugin:vue/vue3-essential",
+		"@vue/airbnb",
 		"@vue/typescript/recommended",
 		"eslint:recommended",
 	],
@@ -13,6 +14,7 @@ module.exports = {
 		ecmaVersion: 2020,
 	},
 	rules: {
+		"linebreak-style": [ "error", ( process.platform === "win32" ? "windows" : "unix" ) ],
 		"no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
 		"no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 		indent: "off",
