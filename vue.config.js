@@ -1,4 +1,5 @@
 const path = require( "path" );
+const SpriteLoaderPlugin = require( 'svg-sprite-loader/plugin' );
 
 const { NODE_ENV, HOST, PORT } = process.env;
 const isDev = NODE_ENV === "development";
@@ -45,5 +46,23 @@ module.exports = {
 				},
 			},
 		},
+	},
+	configureWebpack: {
+		plugins: [
+			new SpriteLoaderPlugin( {
+				plainSprite: true,
+			} ),
+		],
+	},
+	chainWebpack: config => {
+		config.module
+			.rule( 'svg' )
+			.test( /\.(svg)(\?.*)?$/ )
+			.use( 'file-loader' )
+			.loader( 'svg-sprite-loader' )
+			.options( {
+				extract: true,
+				spriteFilename: 'my-sprite.svg',
+			} );
 	},
 };
