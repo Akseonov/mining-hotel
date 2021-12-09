@@ -53,6 +53,11 @@ module.exports = {
 				plainSprite: true,
 			} ),
 		],
+		resolve: {
+			alias: {
+				'@': paths.src,
+			},
+		},
 	},
 	chainWebpack: config => {
 		config.module
@@ -62,7 +67,19 @@ module.exports = {
 			.loader( 'svg-sprite-loader' )
 			.options( {
 				extract: true,
-				spriteFilename: 'my-sprite.svg',
+				spriteFilename: 'img/my-sprite.svg',
+			} );
+		config.module
+			.rule( 'images' )
+			.test( /\.(gif|png|jpe?g)$/i )
+			.use( 'url-loader' )
+			.loader( 'url-loader' )
+			.options( {
+				limit: 4096,
+				fallback: {
+					loader: 'file-loader',
+					options: { name: 'img/[name].[ext]' },
+				},
 			} );
 	},
 };
