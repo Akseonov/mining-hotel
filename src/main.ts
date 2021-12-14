@@ -8,7 +8,7 @@ import '@/plugins/svg-import';
 
 createApp( App )
 	.use( svgSpriteDirectivePlugin, {
-		url: './my-sprite.svg',
+		url: './img/my-sprite.svg',
 	} )
 	.use( store )
 	.use( router )

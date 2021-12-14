@@ -4,9 +4,9 @@
 		|
 		<router-link to="/about">About</router-link>
 		|
-		<svg v-svg symbol="like" size="24"></svg>)
+		<svg v-svg symbol="like" size="14"></svg>
 		|
-		<svg v-svg symbol="play" size="24"></svg>)
+		<svg v-svg symbol="play" size="14"></svg>
 	</div>
 	<router-view />
 </template>
