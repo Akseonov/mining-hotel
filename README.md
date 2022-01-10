@@ -1,4 +1,4 @@
-# mining-hotel
+# vue-cli-v5
 
 ## Project setup
 ```

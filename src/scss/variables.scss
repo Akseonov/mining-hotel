@@ -1,0 +1,11 @@
+$body-font-family: 'Work Sans', serif;
+$border-radius-root: 6px;
+
+$headings: (
+	'h1': (
+		'size': 3.3125rem,
+		'line-height': 1.15em
+	),
+);
+
+@import 'src/assets/scss/vuetify';
