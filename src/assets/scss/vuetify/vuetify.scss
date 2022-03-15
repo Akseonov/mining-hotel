@@ -1,0 +1,58 @@
+@use 'sass:map';
+
+@use 'sass:color';
+
+@use 'variables/colors/index';
+
+@use 'variables/typography';
+
+$border-radius-root: 4px;
+
+$rounded: (
+	0: 0,
+	1: $border-radius-root * 1,
+	2: $border-radius-root * 2,
+	3: $border-radius-root * 3,
+	4: $border-radius-root * 4,
+	5: $border-radius-root * 5,
+	6: $border-radius-root * 6,
+	7: $border-radius-root * 7,
+	8: $border-radius-root * 8,
+	9: $border-radius-root * 9,
+	10: $border-radius-root * 10,
+);
+
+@use 'vuetify/styles' with (
+	//colors
+
+	//$shades: $shades,
+
+	$colors: (
+		'base': index.$base,
+		'red': index.$red,
+		'orange': index.$orange,
+		'yellow': index.$yellow,
+		'green': index.$green,
+		'blue': index.$blue,
+		'syan': index.$syan,
+		'violet': index.$violet,
+	),
+
+	//variables
+	$body-font-family: #{"Open Sans", sans-serif},
+	$font-size-root: 16px,
+	$line-height-root: 1.5,
+	$spacers-steps: 25,
+	$rounded: $rounded,
+
+	$grid-breakpoints: (
+		'xs': 0,
+		'sm': 375px,
+		'md': 768px,
+		'lg': 1440px,
+		'xl': 1920px,
+		'xxl': 2560px,
+	),
+
+	$typography: typography.$typography,
+);

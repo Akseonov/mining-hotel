@@ -3,7 +3,7 @@ import { svgSpriteDirectivePlugin } from 'vue-svg-sprite';
 import App from './App.vue';
 import router from './router';
 import store from './store';
-import vuetify from './plugins/vuetify';
+import vuetify from './plugins/vuetify/vuetify';
 import loadFonts from './plugins/webfontloader';
 import '@/plugins/svg-import';
 

@@ -1,11 +1,13 @@
 <template>
 	<v-app>
+		<main-header></main-header>
 		<v-main>
+			<router-view />
 			<v-container class="text-center">
 				<v-row>
 					<v-col>
 						<div id="nav">
-							<router-link to="/">Home</router-link>
+							<router-link to="/" class="bg-blue-accent-3">Главная</router-link>
 							|
 							<router-link to="/about">About</router-link>
 							|
@@ -16,23 +18,28 @@
 					</v-col>
 				</v-row>
 			</v-container>
-			<router-view />
 		</v-main>
 	</v-app>
 </template>
 
 <script lang="ts">
-	import { defineComponent } from 'vue';
+import { defineAsyncComponent, defineComponent } from 'vue';
 
-	export default defineComponent( {
-		name: 'App',
+const MainHeader = defineAsyncComponent( () => import( '@/components/layouts/TheMainHeader.vue' ) );
 
-		data() {
-			return {
-				//
-			};
-		},
-	} );
+export default defineComponent( {
+	name: 'App',
+
+	components: {
+		'main-header': MainHeader,
+	},
+
+	data() {
+		return {
+			//
+		};
+	},
+} );
 </script>
 
 <style lang="scss">
