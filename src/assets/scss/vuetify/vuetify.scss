@@ -2,9 +2,9 @@
 
 @use 'sass:color';
 
-@use 'variables/colors/index';
+//@use 'variables/colors/index';
 
-@use 'variables/typography';
+@use 'variables/index';
 
 $border-radius-root: 4px;
 
@@ -39,7 +39,7 @@ $rounded: (
 	),
 
 	//variables
-	$body-font-family: #{"Open Sans", sans-serif},
+	$body-font-family: index.$body-font-family,
 	$font-size-root: 16px,
 	$line-height-root: 1.5,
 	$spacers-steps: 25,
@@ -54,5 +54,5 @@ $rounded: (
 		'xxl': 2560px,
 	),
 
-	$typography: typography.$typography,
+	$typography: index.$typography,
 );

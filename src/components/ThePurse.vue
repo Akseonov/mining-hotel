@@ -9,8 +9,33 @@
 			<svg v-svg symbol="clock" size="20"></svg>
 			<div class="d-flex align-end flex-column">
 				<p class="text-green-300 text-body-2">+300,56 %</p>
-				<p class="text-base-86 text-body-2">За все время</p>
+				<a href="#" class="text-base-86 text-body-2 text-decoration-underline">За все время</a>
 			</div>
+		</div>
+	</v-container>
+	<v-container class="px-4 py-0 mt-6">
+		<div class="pa-4 bg-base-1dp d-flex justify-space-around rounded-4">
+			<a href="#" class="d-flex flex-column align-center text-decoration-none">
+				<div class="purse__icon-wrapper mb-1 pa-3 bg-base-8dp rounded-circle
+					d-flex justify-center align-center">
+					<svg v-svg symbol="plus" size="24"></svg>
+				</div>
+				<p class="text-base-86 text-caption-2">Пополнить</p>
+			</a>
+			<a href="#" class="d-flex flex-column align-center text-decoration-none">
+				<div class="purse__icon-wrapper mb-1 pa-3 bg-base-8dp rounded-circle
+					d-flex justify-center align-center">
+					<svg v-svg symbol="arrow-down" size="24"></svg>
+				</div>
+				<p class="text-base-86 text-caption-2">Вывести</p>
+			</a>
+			<a href="#" class="d-flex flex-column align-center text-decoration-none">
+				<div class="purse__icon-wrapper mb-1 pa-3 bg-base-8dp rounded-circle
+					d-flex justify-center align-center">
+					<svg v-svg symbol="reverse" size="24"></svg>
+				</div>
+				<p class="text-base-86 text-caption-2">Перевести</p>
+			</a>
 		</div>
 	</v-container>
 </template>
@@ -21,6 +46,11 @@ export default {
 };
 </script>
 
-<!--<style scoped>-->
-
-<!--</style>-->
+<style scoped lang="scss">
+.purse {
+	&__icon-wrapper {
+		width: fit-content;
+		width: -moz-fit-content;
+	}
+}
+</style>
