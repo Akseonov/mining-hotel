@@ -78,6 +78,23 @@ $typography: (
 		'weight': 600,
 		'line-height': 1rem,
 		'letter-spacing': 1.5px,
+		'font-family': $body-font-family,
 		'text-transform': false
-	)
+	),
+	'overline-4': (
+		'size': 0.625rem,
+		'weight': 400,
+		'line-height': 0.875rem,
+		'letter-spacing': 0.25px,
+		'font-family': $body-font-family,
+		'text-transform': false
+	),
+	'overline-2': (
+		'size': 0.75rem,
+		'weight': 400,
+		'line-height': 1rem,
+		'letter-spacing': 0.25px,
+		'font-family': $body-font-family,
+		'text-transform': false
+	),
 )
